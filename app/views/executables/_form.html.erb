@@ -1,0 +1,533 @@
+<%= form_for(@executable) do |f| %>
+  <% if @executable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@executable.errors.count, "error") %> prohibited this executable from being saved:</h2>
+
+      <ul>
+      <% @executable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :md5 %><br>
+    <%= f.text_field :md5 %>
+  </div>
+  <div class="field">
+    <%= f.label :sha1 %><br>
+    <%= f.text_field :sha1 %>
+  </div>
+  <div class="field">
+    <%= f.label :sha256 %><br>
+    <%= f.text_field :sha256 %>
+  </div>
+  <div class="field">
+    <%= f.label :file_size_string %><br>
+    <%= f.text_field :file_size_string %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :section_sums %><br>
+    <%= f.text_area :section_sums %>
+  </div>
+  <div class="field">
+    <%= f.label :av_detection %><br>
+    <%= f.text_field :av_detection %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_file_sha256 %><br>
+    <%= f.text_field :parent_file_sha256 %>
+  </div>
+  <div class="field">
+    <%= f.label :unpacked_file_sha256 %><br>
+    <%= f.text_field :unpacked_file_sha256 %>
+  </div>
+  <div class="field">
+    <%= f.label :dropped_files_sha256 %><br>
+    <%= f.text_area :dropped_files_sha256 %>
+  </div>
+  <div class="field">
+    <%= f.label :registry_modifications %><br>
+    <%= f.text_area :registry_modifications %>
+  </div>
+  <div class="field">
+    <%= f.label :file_system_modifications %><br>
+    <%= f.text_area :file_system_modifications %>
+  </div>
+  <div class="field">
+    <%= f.label :created_or_destroyed_processes %><br>
+    <%= f.text_area :created_or_destroyed_processes %>
+  </div>
+  <div class="field">
+    <%= f.label :anti_vm %><br>
+    <%= f.text_area :anti_vm %>
+  </div>
+  <div class="field">
+    <%= f.label :anti_debug %><br>
+    <%= f.text_area :anti_debug %>
+  </div>
+  <div class="field">
+    <%= f.label :generated_mutexes %><br>
+    <%= f.text_area :generated_mutexes %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br>
+    <%= f.text_area :other %>
+  </div>
+  <div class="field">
+    <%= f.label :dns_names %><br>
+    <%= f.text_area :dns_names %>
+  </div>
+  <div class="field">
+    <%= f.label :ip_addresses %><br>
+    <%= f.text_area :ip_addresses %>
+  </div>
+  <div class="field">
+    <%= f.label :communication_samples %><br>
+    <%= f.text_area :communication_samples %>
+  </div>
+  <div class="field">
+    <%= f.label :ids_signatures %><br>
+    <%= f.text_area :ids_signatures %>
+  </div>
+  <div class="field">
+    <%= f.label :pcap_artifact %><br>
+    <%= f.text_field :pcap_artifact %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_header_machine %><br>
+    <%= f.text_field :image_file_header_machine %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_header_number_of_sections %><br>
+    <%= f.text_field :image_file_header_number_of_sections %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_header_time_date_stamp %><br>
+    <%= f.datetime_select :image_file_header_time_date_stamp %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_header_pointer_to_symbol_table %><br>
+    <%= f.text_field :image_file_header_pointer_to_symbol_table %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_header_number_of_symbols %><br>
+    <%= f.text_field :image_file_header_number_of_symbols %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_header_size_of_optional_header %><br>
+    <%= f.text_field :image_file_header_size_of_optional_header %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_header_characteristics %><br>
+    <%= f.text_field :image_file_header_characteristics %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_magic %><br>
+    <%= f.text_field :image_optional_header_magic %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_major_linker_version %><br>
+    <%= f.text_field :image_optional_header_major_linker_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_minor_linker_version %><br>
+    <%= f.text_field :image_optional_header_minor_linker_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_code %><br>
+    <%= f.text_field :image_optional_header_size_of_code %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_initialized_data %><br>
+    <%= f.text_field :image_optional_header_size_of_initialized_data %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_uninitialized_data %><br>
+    <%= f.text_field :image_optional_header_size_of_uninitialized_data %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_address_of_entry_point %><br>
+    <%= f.text_field :image_optional_header_address_of_entry_point %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_base_of_code %><br>
+    <%= f.text_field :image_optional_header_base_of_code %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_base_of_data %><br>
+    <%= f.text_field :image_optional_header_base_of_data %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_image_base %><br>
+    <%= f.text_field :image_optional_header_image_base %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_section_alignment %><br>
+    <%= f.text_field :image_optional_header_section_alignment %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_file_alignment %><br>
+    <%= f.text_field :image_optional_header_file_alignment %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_major_os_version %><br>
+    <%= f.text_field :image_optional_header_major_os_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_minor_os_version %><br>
+    <%= f.text_field :image_optional_header_minor_os_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_major_image_version %><br>
+    <%= f.text_field :image_optional_header_major_image_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_minor_image_version %><br>
+    <%= f.text_field :image_optional_header_minor_image_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_major_subsystem_version %><br>
+    <%= f.text_field :image_optional_header_major_subsystem_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_minor_subsystem_version %><br>
+    <%= f.text_field :image_optional_header_minor_subsystem_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_win32_version_value %><br>
+    <%= f.text_field :image_optional_header_win32_version_value %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_image %><br>
+    <%= f.text_field :image_optional_header_size_of_image %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_headers %><br>
+    <%= f.text_field :image_optional_header_size_of_headers %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_checksum %><br>
+    <%= f.text_field :image_optional_header_checksum %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_subsystem %><br>
+    <%= f.text_field :image_optional_header_subsystem %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_dll_characteristics %><br>
+    <%= f.text_field :image_optional_header_dll_characteristics %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_stack_reserve %><br>
+    <%= f.text_field :image_optional_header_size_of_stack_reserve %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_stack_commit %><br>
+    <%= f.text_field :image_optional_header_size_of_stack_commit %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_heap_reserve %><br>
+    <%= f.text_field :image_optional_header_size_of_heap_reserve %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_size_of_heap_commit %><br>
+    <%= f.text_field :image_optional_header_size_of_heap_commit %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_loader_flags %><br>
+    <%= f.text_field :image_optional_header_loader_flags %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_number_of_data_directories %><br>
+    <%= f.text_field :image_optional_header_number_of_data_directories %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_export_table_rva %><br>
+    <%= f.text_field :image_optional_header_export_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_export_table_size %><br>
+    <%= f.text_field :image_optional_header_export_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_import_table_rva %><br>
+    <%= f.text_field :image_optional_header_import_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_import_table_size %><br>
+    <%= f.text_field :image_optional_header_import_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_resource_table_rva %><br>
+    <%= f.text_field :image_optional_header_resource_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_resource_table_size %><br>
+    <%= f.text_field :image_optional_header_resource_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_exception_table_rva %><br>
+    <%= f.text_field :image_optional_header_exception_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_exception_table_size %><br>
+    <%= f.text_field :image_optional_header_exception_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_certificate_table_offset %><br>
+    <%= f.text_field :image_optional_header_certificate_table_offset %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_certificate_table_size %><br>
+    <%= f.text_field :image_optional_header_certificate_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_base_relocation_table_rva %><br>
+    <%= f.text_field :image_optional_header_base_relocation_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_base_relocation_table_size %><br>
+    <%= f.text_field :image_optional_header_base_relocation_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_debug_directory_rva %><br>
+    <%= f.text_field :image_optional_header_debug_directory_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_debug_directory_size %><br>
+    <%= f.text_field :image_optional_header_debug_directory_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_architecture_specific_data_rva %><br>
+    <%= f.text_field :image_optional_header_architecture_specific_data_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_architecture_specific_data_size %><br>
+    <%= f.text_field :image_optional_header_architecture_specific_data_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_global_pointer_register_rva %><br>
+    <%= f.text_field :image_optional_header_global_pointer_register_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_global_pointer_register_size %><br>
+    <%= f.text_field :image_optional_header_global_pointer_register_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_tls_table_rva %><br>
+    <%= f.text_field :image_optional_header_tls_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_tls_table_size %><br>
+    <%= f.text_field :image_optional_header_tls_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_load_configuration_table_rva %><br>
+    <%= f.text_field :image_optional_header_load_configuration_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_load_configuration_table_size %><br>
+    <%= f.text_field :image_optional_header_load_configuration_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_bound_import_table_rva %><br>
+    <%= f.text_field :image_optional_header_bound_import_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_bound_import_table_size %><br>
+    <%= f.text_field :image_optional_header_bound_import_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_import_address_table_rva %><br>
+    <%= f.text_field :image_optional_header_import_address_table_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_import_address_table_size %><br>
+    <%= f.text_field :image_optional_header_import_address_table_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_delay_import_descriptors_rva %><br>
+    <%= f.text_field :image_optional_header_delay_import_descriptors_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_delay_import_descriptors_size %><br>
+    <%= f.text_field :image_optional_header_delay_import_descriptors_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_cli_header_rva %><br>
+    <%= f.text_field :image_optional_header_cli_header_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_cli_header_size %><br>
+    <%= f.text_field :image_optional_header_cli_header_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_end_rva %><br>
+    <%= f.text_field :image_optional_header_end_rva %>
+  </div>
+  <div class="field">
+    <%= f.label :image_optional_header_end_size %><br>
+    <%= f.text_field :image_optional_header_end_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_section_headers %><br>
+    <%= f.text_area :image_section_headers %>
+  </div>
+  <div class="field">
+    <%= f.label :import_address_table %><br>
+    <%= f.text_area :import_address_table %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_directory_characteristics %><br>
+    <%= f.text_field :image_debug_directory_characteristics %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_directory_time_date_stamp %><br>
+    <%= f.text_field :image_debug_directory_time_date_stamp %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_directory_major_version %><br>
+    <%= f.text_field :image_debug_directory_major_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_directory_minor_version %><br>
+    <%= f.text_field :image_debug_directory_minor_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_directory_type %><br>
+    <%= f.text_field :image_debug_directory_type %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_directory_size_of_data %><br>
+    <%= f.text_field :image_debug_directory_size_of_data %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_directory_address_of_raw_data %><br>
+    <%= f.text_field :image_debug_directory_address_of_raw_data %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_directory_pointer_to_raw_data %><br>
+    <%= f.text_field :image_debug_directory_pointer_to_raw_data %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_size %><br>
+    <%= f.text_field :image_load_config_directory_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_time_date_stamp %><br>
+    <%= f.text_field :image_load_config_directory_time_date_stamp %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_major_version %><br>
+    <%= f.text_field :image_load_config_directory_major_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_minor_version %><br>
+    <%= f.text_field :image_load_config_directory_minor_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_global_flags_clear %><br>
+    <%= f.text_field :image_load_config_directory_global_flags_clear %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_global_flags_set %><br>
+    <%= f.text_field :image_load_config_directory_global_flags_set %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_critical_section_default_timeout %><br>
+    <%= f.text_field :image_load_config_directory_critical_section_default_timeout %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_decommit_free_block_threshold %><br>
+    <%= f.text_field :image_load_config_directory_decommit_free_block_threshold %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_decommit_total_free_threshold %><br>
+    <%= f.text_field :image_load_config_directory_decommit_total_free_threshold %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_maximum_allocation_size %><br>
+    <%= f.text_field :image_load_config_directory_maximum_allocation_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_virtual_memory_threshold %><br>
+    <%= f.text_field :image_load_config_directory_virtual_memory_threshold %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_process_heap_flags %><br>
+    <%= f.text_field :image_load_config_directory_process_heap_flags %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_process_affinity_mask %><br>
+    <%= f.text_field :image_load_config_directory_process_affinity_mask %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_csd_version %><br>
+    <%= f.text_field :image_load_config_directory_csd_version %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_reserved %><br>
+    <%= f.text_field :image_load_config_directory_reserved %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_edit_list_va %><br>
+    <%= f.text_field :image_load_config_directory_edit_list_va %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_security_cookie_va %><br>
+    <%= f.text_field :image_load_config_directory_security_cookie_va %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_se_handler_table_va %><br>
+    <%= f.text_field :image_load_config_directory_se_handler_table_va %>
+  </div>
+  <div class="field">
+    <%= f.label :image_load_config_directory_se_handler_count %><br>
+    <%= f.text_field :image_load_config_directory_se_handler_count %>
+  </div>
+  <div class="field">
+    <%= f.label :image_debug_type_codeview %><br>
+    <%= f.text_area :image_debug_type_codeview %>
+  </div>
+  <div class="field">
+    <%= f.label :import_directory_table %><br>
+    <%= f.text_area :import_directory_table %>
+  </div>
+  <div class="field">
+    <%= f.label :inport_name_table %><br>
+    <%= f.text_area :inport_name_table %>
+  </div>
+  <div class="field">
+    <%= f.label :import_hints_names_and_dll_names %><br>
+    <%= f.text_area :import_hints_names_and_dll_names %>
+  </div>
+	<div class="field">
+		<%= f.label :sandbox_link%><br />
+		<%= f.text_field :sandbox_link%><br />
+	</div>
+	<div class="field">
+		<%= f.label :associated_intel %><br />
+		<%= f.text_field :associated_intel%><br />
+	</div>
+	<div class="field">
+		<%= f.label :vt_link%><br />
+		<%= f.text_field :vt_link %><br />
+	</div>
+	<div class="field">
+		<%= f.label :parent_packed_file %><br />
+		<%= f.text_field :parent_packed_file%><br />
+	</div>
+	<div class="field">
+		<%= f.label :malicious_file %><br />
+		<%= f.check_box :malicious_file%><br />
+	</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Listing executables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>MD5</th>
+      <th>SHA1</th>
+      <th>SHA256</th>
+      <th>AV detection</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @executables.each do |executable| %>
+      <tr>
+        <td><%= executable.md5 %></td>
+        <td><%= executable.sha1 %></td>
+        <td><%= executable.sha256 %></td>
+        <td><%= executable.av_detection %></td>
+        <td><%= link_to 'Show', executable %></td>
+        <td><%= link_to 'Edit', edit_executable_path(executable) %></td>
+        <td><%= link_to 'Destroy', executable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Executable', new_executable_path %>

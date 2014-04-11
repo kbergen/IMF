@@ -1,0 +1,36 @@
+<center><h1>Listing incidents</h1></center>
+<center>
+	<div class=centerbox>
+		<table>
+			<thead>
+				<tr>
+
+					<th>Incidnet name</th>
+					<th>Category</th>
+					<th>Location</th>
+					<th>Time of incident</th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @incidents.each do |incident| %>
+					<tr>
+						<td><center><%= incident.incident_incidnet_name %></center></td>
+						<td><center><%= incident.incident_incident_category %></center></td>
+						<td><center><%= incident.incident_location %></center></td>
+						<td><center><%= incident.incident_incident_time %></center></td>
+						<td><%= link_to 'Show', incident %></td>
+						<td><%= link_to 'Edit', edit_incident_path(incident) %></td>
+						<td><%= link_to 'Destroy', incident, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+
+		<%= link_to 'New Incident', new_incident_path %>
+		<br>
+	</div>
+</center>

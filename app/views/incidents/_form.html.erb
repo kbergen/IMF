@@ -1,0 +1,102 @@
+<%= form_for(@incident) do |f| %>
+  <% if @incident.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@incident.errors.count, "error") %> prohibited this incident from being saved:</h2>
+
+      <ul>
+      <% @incident.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="field">
+		<strong>Incidnet name:</strong><br>
+		<%= f.text_field :incident_incidnet_name %>
+	</div>
+	<div class="field">
+		<strong>Internal IP:</strong><br>
+		<%= f.text_field :incident_internal_ip %>
+	</div>
+	<div class="field">
+		<strong>Translated IP:</strong><br>
+		<%= f.text_field :incident_translated_ip %>
+	</div>
+	<div class="field">
+		<strong>Host name:</strong><br>
+		<%= f.text_field :incident_host_name %>
+	</div>
+	<div class="field">
+		<strong>Incident category:</strong><br>
+		<%= f.text_field :incident_incident_category %>
+	</div>
+	<div class="field">
+		<strong>Time of incident:</strong><br>
+		<%= f.datetime_select :incident_incident_time %>
+	</div>
+	<div class="field">
+		<strong>Time incident was detected:</strong><br>
+		<%= f.datetime_select :incident_detection_time %>
+	</div>
+	<div class="field">
+		<strong>Time of remediation:</strong><br>
+		<%= f.datetime_select :incident_remediation_time %>
+	</div>
+	<div class="field">
+		<strong>Notes:</strong><br>
+		<%= f.text_area :incident_notes %>
+	</div>
+	<div class="field">
+		<strong>Remediation actions:</strong><br>
+		<%= f.text_area :incident_remediation_actions %>
+	</div>
+	<div class="field">
+		<strong>CERT tracking ID:</strong><br>
+		<%= f.text_field :incident_cert_tracking_number %>
+	</div>
+	<div class="field">
+		<strong>Permission of user/application:</strong><br>
+		<%= f.text_field :incident_permission_level %>
+	</div>
+	<div class="field">
+		<strong>Affected OS:</strong><br>
+		<%= f.text_field :incident_operating_system %>
+	</div>
+	<div class="field">
+		<strong>Location of incident:</strong><br>
+		<%= f.text_field :incident_location %>
+	</div>
+	<div class="field">
+		<strong>Exploited application:</strong><br>
+		<%= f.text_field :incident_exploited_application %>
+	</div>
+	<div class="field">
+		<strong>Cause of incident:</strong><br>
+		<%= f.text_field :incident_cause %>
+	</div>
+	<div class="field">
+		<strong>Associated CVE:</strong><br>
+		<%= f.text_field :incident_exploit_cve %>
+	</div>
+<h1>External Incident Info:</h1>
+	<div class="field">
+		<strong>Attackers IP:</strong><br>
+		<%= f.text_field :external_attackers_ip %>
+	</div>
+	<div class="field">
+		<strong>Attacers geolocation</strong><br>
+		<%= f.text_field :external_attackers_country %>
+	</div>
+	<div class="field">
+		<strong>Attack tool:</strong><br>
+		<%= f.text_field :external_attack_tool %>
+	</div>
+	<div class="field">
+		<strong>Impact on server:</strong><br>
+		<%= f.text_field :external_impact_to_server %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>

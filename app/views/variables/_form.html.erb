@@ -1,0 +1,49 @@
+<%= form_for(@variable) do |f| %>
+  <% if @variable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@variable.errors.count, "error") %> prohibited this variable from being saved:</h2>
+
+      <ul>
+      <% @variable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location_options %><br>
+    <%= f.text_area :location_options %>
+  </div>
+  <div class="field">
+    <%= f.label :exploited_application_options %><br>
+    <%= f.text_area :exploited_application_options %>
+  </div>
+  <div class="field">
+    <%= f.label :social_engineering_options %><br>
+    <%= f.text_area :social_engineering_options %>
+  </div>
+  <div class="field">
+    <%= f.label :user_permissions_options %><br>
+    <%= f.text_area :user_permissions_options %>
+  </div>
+  <div class="field">
+    <%= f.label :operating_system_options %><br>
+    <%= f.text_area :operating_system_options %>
+  </div>
+  <div class="field">
+    <%= f.label :incident_cause_options %><br>
+    <%= f.text_area :incident_cause_options %>
+  </div>
+  <div class="field">
+    <%= f.label :external_impact %><br>
+    <%= f.text_area :external_impact %>
+  </div>
+  <div class="field">
+    <%= f.label :incident_category_options %><br>
+    <%= f.text_area :incident_category_options %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

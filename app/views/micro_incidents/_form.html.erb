@@ -1,0 +1,69 @@
+<%= form_for(@micro_incident) do |f| %>
+  <% if @micro_incident.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@micro_incident.errors.count, "error") %> prohibited this micro_incident from being saved:</h2>
+
+      <ul>
+      <% @micro_incident.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :internal_malicious_ip %><br>
+    <%= f.text_field :internal_malicious_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_exploit_kit %><br>
+    <%= f.text_field :internal_exploit_kit %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_malicious_url %><br>
+    <%= f.text_field :internal_malicious_url %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_malicious_resource %><br>
+    <%= f.text_field :internal_malicious_resource %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_geographic_location %><br>
+    <%= f.text_field :internal_geographic_location %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_referrer_chian %><br>
+    <%= f.text_field :internal_referrer_chian %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_mal_exe %><br>
+    <%= f.text_field :internal_mal_exe %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_mal_jar %><br>
+    <%= f.text_field :internal_mal_jar %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_mal_pdf %><br>
+    <%= f.text_field :internal_mal_pdf %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_mal_xls %><br>
+    <%= f.text_field :internal_mal_xls %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_mal_doc %><br>
+    <%= f.text_field :internal_mal_doc %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_mal_eml %><br>
+    <%= f.text_field :internal_mal_eml %>
+  </div>
+  <div class="field">
+    <%= f.label :incident_id %><br>
+    <%= f.text_field :incident_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

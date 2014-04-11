@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  incident_internal_ip: MyString
+  incident_translated_ip: MyString
+  incident_host_name: MyString
+  incident_incident_time: 2014-04-07 02:23:04
+  incident_detection_time: 2014-04-07 02:23:04
+  incident_remediation_time: 2014-04-07 02:23:04
+  incident_notes: MyText
+  incident_remediation_actions: MyText
+  incident_cert_tracking_number: MyString
+  incident_permission_level: MyString
+  incident_operating_system: MyString
+  incident_location: MyString
+  incident_exploited_application: MyString
+  incident_cause: MyString
+  incident_exploit_cve: MyString
+  incident_incident_category: MyString
+  incident_incidnet_name: MyString
+  external_attackers_ip: MyString
+  external_attackers_country: MyString
+  external_attack_tool: MyString
+  external_impact_to_server: MyString
+
+two:
+  incident_internal_ip: MyString
+  incident_translated_ip: MyString
+  incident_host_name: MyString
+  incident_incident_time: 2014-04-07 02:23:04
+  incident_detection_time: 2014-04-07 02:23:04
+  incident_remediation_time: 2014-04-07 02:23:04
+  incident_notes: MyText
+  incident_remediation_actions: MyText
+  incident_cert_tracking_number: MyString
+  incident_permission_level: MyString
+  incident_operating_system: MyString
+  incident_location: MyString
+  incident_exploited_application: MyString
+  incident_cause: MyString
+  incident_exploit_cve: MyString
+  incident_incident_category: MyString
+  incident_incidnet_name: MyString
+  external_attackers_ip: MyString
+  external_attackers_country: MyString
+  external_attack_tool: MyString
+  external_impact_to_server: MyString

@@ -1,0 +1,51 @@
+<h1>Listing micro_incidents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Internal malicious ip</th>
+      <th>Internal exploit kit</th>
+      <th>Internal malicious url</th>
+      <th>Internal malicious resource</th>
+      <th>Internal geographic location</th>
+      <th>Internal referrer chian</th>
+      <th>Internal mal exe</th>
+      <th>Internal mal jar</th>
+      <th>Internal mal pdf</th>
+      <th>Internal mal xls</th>
+      <th>Internal mal doc</th>
+      <th>Internal mal eml</th>
+      <th>Incident</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @micro_incidents.each do |micro_incident| %>
+      <tr>
+        <td><%= micro_incident.internal_malicious_ip %></td>
+        <td><%= micro_incident.internal_exploit_kit %></td>
+        <td><%= micro_incident.internal_malicious_url %></td>
+        <td><%= micro_incident.internal_malicious_resource %></td>
+        <td><%= micro_incident.internal_geographic_location %></td>
+        <td><%= micro_incident.internal_referrer_chian %></td>
+        <td><%= micro_incident.internal_mal_exe %></td>
+        <td><%= micro_incident.internal_mal_jar %></td>
+        <td><%= micro_incident.internal_mal_pdf %></td>
+        <td><%= micro_incident.internal_mal_xls %></td>
+        <td><%= micro_incident.internal_mal_doc %></td>
+        <td><%= micro_incident.internal_mal_eml %></td>
+        <td><%= micro_incident.incident %></td>
+        <td><%= link_to 'Show', micro_incident %></td>
+        <td><%= link_to 'Edit', edit_micro_incident_path(micro_incident) %></td>
+        <td><%= link_to 'Destroy', micro_incident, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Micro incident', new_micro_incident_path %>

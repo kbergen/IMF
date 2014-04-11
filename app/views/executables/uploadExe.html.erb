@@ -1,0 +1,7 @@
+
+<br />
+<h1>File Upload</h1>
+<%= form_tag 'uploadExe', :multipart => true do %>
+   <label for="file">Upload file</label> <%= file_field_tag "file" %>
+   <%= submit_tag %>
+<% end %>

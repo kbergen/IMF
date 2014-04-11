@@ -1,0 +1,112 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Incident ID: <%=@incident.id%></h1></center><br />
+
+<div class=showincident>
+	<p>
+		<strong>Incident name:</strong>
+		<%= @incident.incident_incidnet_name %>
+	</p>
+
+	<p>
+		<strong>Internal ip:</strong>
+		<%= @incident.incident_internal_ip %>
+	</p>
+
+	<p>
+		<strong>Translated IP:</strong>
+		<%= @incident.incident_translated_ip %>
+	</p>
+
+	<p>
+		<strong>Host name:</strong>
+		<%= @incident.incident_host_name %>
+	</p>
+
+	<p>
+		<strong>Incident category:</strong>
+		<%= @incident.incident_incident_category %>
+	</p>
+
+	<p>
+		<strong>Time of incident:</strong>
+		<%= @incident.incident_incident_time %>
+	</p>
+
+	<p>
+		<strong>Time incident was detected:</strong>
+		<%= @incident.incident_detection_time %>
+	</p>
+
+	<p>
+		<strong>Time of remediation:</strong>
+		<%= @incident.incident_remediation_time %>
+	</p>
+
+	<p>
+		<strong>Notes:</strong>
+		<%= @incident.incident_notes %>
+	</p>
+
+	<p>
+		<strong>Remediation actions:</strong>
+		<%= @incident.incident_remediation_actions %>
+	</p>
+
+	<p>
+		<strong>CERT tracking ID:</strong>
+		<%= @incident.incident_cert_tracking_number %>
+	</p>
+
+	<p>
+		<strong>Permission of user/application:</strong>
+		<%= @incident.incident_permission_level %>
+	</p>
+
+	<p>
+		<strong>Affected OS:</strong>
+		<%= @incident.incident_operating_system %>
+	</p>
+
+	<p>
+		<strong>Location of incident:</strong>
+		<%= @incident.incident_location %>
+	</p>
+
+	<p>
+		<strong>Exploited application:</strong>
+		<%= @incident.incident_exploited_application %>
+	</p>
+
+	<p>
+		<strong>Cause of incident:</strong>
+		<%= @incident.incident_cause %>
+	</p>
+
+	<p>
+		<strong>Associated CVE:</strong>
+		<%= @incident.incident_exploit_cve %>
+	</p>
+
+	<p>
+		<strong>Attackers IP:</strong>
+		<%= @incident.external_attackers_ip %>
+	</p>
+
+	<p>
+		<strong>Attackers geolocation:</strong>
+		<%= @incident.external_attackers_country %>
+	</p>
+
+	<p>
+		<strong>Attack tool:</strong>
+		<%= @incident.external_attack_tool %>
+	</p>
+
+	<p>
+		<strong>Impact to server:</strong>
+		<%= @incident.external_impact_to_server %>
+	</p>
+	<%= link_to 'Edit', edit_incident_path(@incident) %> |
+	<%= link_to 'Back', incidents_path %>
+</div>

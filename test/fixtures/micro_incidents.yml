@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  internal_malicious_ip: MyString
+  internal_exploit_kit: MyString
+  internal_malicious_url: MyString
+  internal_malicious_resource: MyString
+  internal_geographic_location: MyString
+  internal_referrer_chian: MyString
+  internal_mal_exe: MyString
+  internal_mal_jar: MyString
+  internal_mal_pdf: MyString
+  internal_mal_xls: MyString
+  internal_mal_doc: MyString
+  internal_mal_eml: MyString
+  incident_id: 
+
+two:
+  internal_malicious_ip: MyString
+  internal_exploit_kit: MyString
+  internal_malicious_url: MyString
+  internal_malicious_resource: MyString
+  internal_geographic_location: MyString
+  internal_referrer_chian: MyString
+  internal_mal_exe: MyString
+  internal_mal_jar: MyString
+  internal_mal_pdf: MyString
+  internal_mal_xls: MyString
+  internal_mal_doc: MyString
+  internal_mal_eml: MyString
+  incident_id: 

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location options:</strong>
+  <%= @variable.location_options %>
+</p>
+
+<p>
+  <strong>Exploited application options:</strong>
+  <%= @variable.exploited_application_options %>
+</p>
+
+<p>
+  <strong>Social engineering options:</strong>
+  <%= @variable.social_engineering_options %>
+</p>
+
+<p>
+  <strong>User permissions options:</strong>
+  <%= @variable.user_permissions_options %>
+</p>
+
+<p>
+  <strong>Operating system options:</strong>
+  <%= @variable.operating_system_options %>
+</p>
+
+<p>
+  <strong>Incident cause options:</strong>
+  <%= @variable.incident_cause_options %>
+</p>
+
+<p>
+  <strong>External impact:</strong>
+  <%= @variable.external_impact %>
+</p>
+
+<p>
+  <strong>Incident category options:</strong>
+  <%= @variable.incident_category_options %>
+</p>
+
+<%= link_to 'Edit', edit_variable_path(@variable) %> |
+<%= link_to 'Back', variables_path %>

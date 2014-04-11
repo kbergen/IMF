@@ -1,0 +1,649 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Basic file info</h1>
+<p>
+  <strong>Md5:</strong>
+  <%= @executable.md5 %>
+</p>
+
+<p>
+  <strong>Sha1:</strong>
+  <%= @executable.sha1 %>
+</p>
+
+<p>
+  <strong>Sha256:</strong>
+  <%= @executable.sha256 %>
+</p>
+
+<p>
+  <strong>File size:</strong>
+  <%= @executable.file_size_string %>
+</p>
+
+<p>
+  <strong>Av detection:</strong>
+  <%= @executable.av_detection %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @executable.notes %>
+</p>
+
+<p>
+  <strong>Section sums:</strong>
+  <%= @executable.section_sums %>
+</p>
+
+<p>
+  <strong>Parent file sha256:</strong>
+  <%= @executable.parent_file_sha256 %>
+</p>
+
+<p>
+  <strong>SHA256 of unpacked files:</strong>
+  <%= @executable.unpacked_file_sha256 %>
+</p>
+
+<p>
+  <strong>SHA256s of dropped files:</strong>
+  <%= @executable.dropped_files_sha256 %>
+</p>
+
+<p>
+  <strong>Registry modifications:</strong>
+  <%= @executable.registry_modifications %>
+</p>
+
+<p>
+  <strong>File system modifications:</strong>
+  <%= @executable.file_system_modifications %>
+</p>
+
+<p>
+  <strong>Created or destroyed processes:</strong>
+  <%= @executable.created_or_destroyed_processes %>
+</p>
+
+<p>
+  <strong>Anti vm:</strong>
+  <%= @executable.anti_vm %>
+</p>
+
+<p>
+  <strong>Anti debug:</strong>
+  <%= @executable.anti_debug %>
+</p>
+
+<p>
+  <strong>Generated mutexes:</strong>
+  <%= @executable.generated_mutexes %>
+</p>
+
+<p>
+  <strong>Other:</strong>
+  <%= @executable.other %>
+</p>
+
+<p>
+  <strong>Dns names:</strong>
+  <%= @executable.dns_names %>
+</p>
+
+<p>
+  <strong>Ip addresses:</strong>
+  <%= @executable.ip_addresses %>
+</p>
+
+<p>
+  <strong>Communication samples:</strong>
+  <%= @executable.communication_samples %>
+</p>
+
+<p>
+  <strong>Ids signatures:</strong>
+  <%= @executable.ids_signatures %>
+</p>
+
+<p>
+  <strong>Pcap artifact:</strong>
+  <%= @executable.pcap_artifact %>
+</p>
+
+<p>
+  <strong>Image file header machine:</strong>
+  <%= @executable.image_file_header_machine %>
+</p>
+
+<p>
+  <strong>Image file header number of sections:</strong>
+  <%= @executable.image_file_header_number_of_sections %>
+</p>
+
+<p>
+  <strong>Image file header time date stamp:</strong>
+  <%= @executable.image_file_header_time_date_stamp %>
+</p>
+
+<p>
+  <strong>Image file header pointer to symbol table:</strong>
+  <%= @executable.image_file_header_pointer_to_symbol_table %>
+</p>
+
+<p>
+  <strong>Image file header number of symbols:</strong>
+  <%= @executable.image_file_header_number_of_symbols %>
+</p>
+
+<p>
+  <strong>Image file header size of optional header:</strong>
+  <%= @executable.image_file_header_size_of_optional_header %>
+</p>
+
+<p>
+  <strong>Image file header characteristics:</strong>
+  <%= @executable.image_file_header_characteristics %>
+</p>
+
+<p>
+  <strong>Image optional header magic:</strong>
+  <%= @executable.image_optional_header_magic %>
+</p>
+
+<p>
+  <strong>Image optional header major linker version:</strong>
+  <%= @executable.image_optional_header_major_linker_version %>
+</p>
+
+<p>
+  <strong>Image optional header minor linker version:</strong>
+  <%= @executable.image_optional_header_minor_linker_version %>
+</p>
+
+<p>
+  <strong>Image optional header size of code:</strong>
+  <%= @executable.image_optional_header_size_of_code %>
+</p>
+
+<p>
+  <strong>Image optional header size of initialized data:</strong>
+  <%= @executable.image_optional_header_size_of_initialized_data %>
+</p>
+
+<p>
+  <strong>Image optional header size of initialized data:</strong>
+  <%= @executable.image_optional_header_size_of_initialized_data %>
+</p>
+
+<p>
+  <strong>Image optional header size of uninitialized data:</strong>
+  <%= @executable.image_optional_header_size_of_uninitialized_data %>
+</p>
+
+<p>
+  <strong>Image optional header address of entry point:</strong>
+  <%= @executable.image_optional_header_address_of_entry_point %>
+</p>
+
+<p>
+  <strong>Image optional header base of code:</strong>
+  <%= @executable.image_optional_header_base_of_code %>
+</p>
+
+<p>
+  <strong>Image optional header base of data:</strong>
+  <%= @executable.image_optional_header_base_of_data %>
+</p>
+
+<p>
+  <strong>Image optional header image base:</strong>
+  <%= @executable.image_optional_header_image_base %>
+</p>
+
+<p>
+  <strong>Image optional header section alignment:</strong>
+  <%= @executable.image_optional_header_section_alignment %>
+</p>
+
+<p>
+  <strong>Image optional header file alignment:</strong>
+  <%= @executable.image_optional_header_file_alignment %>
+</p>
+
+<p>
+  <strong>Image optional header major os version:</strong>
+  <%= @executable.image_optional_header_major_os_version %>
+</p>
+
+<p>
+  <strong>Image optional header minor os version:</strong>
+  <%= @executable.image_optional_header_minor_os_version %>
+</p>
+
+<p>
+  <strong>Image optional header major image version:</strong>
+  <%= @executable.image_optional_header_major_image_version %>
+</p>
+
+<p>
+  <strong>Image optional header minor image version:</strong>
+  <%= @executable.image_optional_header_minor_image_version %>
+</p>
+
+<p>
+  <strong>Image optional header major subsystem version:</strong>
+  <%= @executable.image_optional_header_major_subsystem_version %>
+</p>
+
+<p>
+  <strong>Image optional header minor subsystem version:</strong>
+  <%= @executable.image_optional_header_minor_subsystem_version %>
+</p>
+
+<p>
+  <strong>Image optional header win32 version value:</strong>
+  <%= @executable.image_optional_header_win32_version_value %>
+</p>
+
+<p>
+  <strong>Image optional header size of image:</strong>
+  <%= @executable.image_optional_header_size_of_image %>
+</p>
+
+<p>
+  <strong>Image optional header size of headers:</strong>
+  <%= @executable.image_optional_header_size_of_headers %>
+</p>
+
+<p>
+  <strong>Image optional header checksum:</strong>
+  <%= @executable.image_optional_header_checksum %>
+</p>
+
+<p>
+  <strong>Image optional header subsystem:</strong>
+  <%= @executable.image_optional_header_subsystem %>
+</p>
+
+<p>
+  <strong>Image optional header dll characteristics:</strong>
+  <%= @executable.image_optional_header_dll_characteristics %>
+</p>
+
+<p>
+  <strong>Image optional header size of stack reserve:</strong>
+  <%= @executable.image_optional_header_size_of_stack_reserve %>
+</p>
+
+<p>
+  <strong>Image optional header size of stack commit:</strong>
+  <%= @executable.image_optional_header_size_of_stack_commit %>
+</p>
+
+<p>
+  <strong>Image optional header size of heap reserve:</strong>
+  <%= @executable.image_optional_header_size_of_heap_reserve %>
+</p>
+
+<p>
+  <strong>Image optional header size of heap commit:</strong>
+  <%= @executable.image_optional_header_size_of_heap_commit %>
+</p>
+
+<p>
+  <strong>Image optional header loader flags:</strong>
+  <%= @executable.image_optional_header_loader_flags %>
+</p>
+
+<p>
+  <strong>Image optional header number of data directories:</strong>
+  <%= @executable.image_optional_header_number_of_data_directories %>
+</p>
+
+<p>
+  <strong>Image optional header export table rva:</strong>
+  <%= @executable.image_optional_header_export_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header export table size:</strong>
+  <%= @executable.image_optional_header_export_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header import table rva:</strong>
+  <%= @executable.image_optional_header_import_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header import table size:</strong>
+  <%= @executable.image_optional_header_import_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header resource table rva:</strong>
+  <%= @executable.image_optional_header_resource_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header resource table size:</strong>
+  <%= @executable.image_optional_header_resource_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header exception table rva:</strong>
+  <%= @executable.image_optional_header_exception_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header exception table size:</strong>
+  <%= @executable.image_optional_header_exception_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header certificate table offset:</strong>
+  <%= @executable.image_optional_header_certificate_table_offset %>
+</p>
+
+<p>
+  <strong>Image optional header certificate table size:</strong>
+  <%= @executable.image_optional_header_certificate_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header base relocation table rva:</strong>
+  <%= @executable.image_optional_header_base_relocation_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header base relocation table size:</strong>
+  <%= @executable.image_optional_header_base_relocation_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header debug directory rva:</strong>
+  <%= @executable.image_optional_header_debug_directory_rva %>
+</p>
+
+<p>
+  <strong>Image optional header debug directory size:</strong>
+  <%= @executable.image_optional_header_debug_directory_size %>
+</p>
+
+<p>
+  <strong>Image optional header architecture specific data rva:</strong>
+  <%= @executable.image_optional_header_architecture_specific_data_rva %>
+</p>
+
+<p>
+  <strong>Image optional header architecture specific data size:</strong>
+  <%= @executable.image_optional_header_architecture_specific_data_size %>
+</p>
+
+<p>
+  <strong>Image optional header global pointer register rva:</strong>
+  <%= @executable.image_optional_header_global_pointer_register_rva %>
+</p>
+
+<p>
+  <strong>Image optional header global pointer register size:</strong>
+  <%= @executable.image_optional_header_global_pointer_register_size %>
+</p>
+
+<p>
+  <strong>Image optional header tls table rva:</strong>
+  <%= @executable.image_optional_header_tls_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header tls table size:</strong>
+  <%= @executable.image_optional_header_tls_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header load configuration table rva:</strong>
+  <%= @executable.image_optional_header_load_configuration_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header load configuration table size:</strong>
+  <%= @executable.image_optional_header_load_configuration_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header bound import table rva:</strong>
+  <%= @executable.image_optional_header_bound_import_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header bound import table size:</strong>
+  <%= @executable.image_optional_header_bound_import_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header import address table rva:</strong>
+  <%= @executable.image_optional_header_import_address_table_rva %>
+</p>
+
+<p>
+  <strong>Image optional header import address table size:</strong>
+  <%= @executable.image_optional_header_import_address_table_size %>
+</p>
+
+<p>
+  <strong>Image optional header delay import descriptors rva:</strong>
+  <%= @executable.image_optional_header_delay_import_descriptors_rva %>
+</p>
+
+<p>
+  <strong>Image optional header delay import descriptors size:</strong>
+  <%= @executable.image_optional_header_delay_import_descriptors_size %>
+</p>
+
+<p>
+  <strong>Image optional header cli header rva:</strong>
+  <%= @executable.image_optional_header_cli_header_rva %>
+</p>
+
+<p>
+  <strong>Image optional header cli header size:</strong>
+  <%= @executable.image_optional_header_cli_header_size %>
+</p>
+
+<p>
+  <strong>Image optional header end rva:</strong>
+  <%= @executable.image_optional_header_end_rva %>
+</p>
+
+<p>
+  <strong>Image optional header end size:</strong>
+  <%= @executable.image_optional_header_end_size %>
+</p>
+
+<p>
+  <strong>Image section headers:</strong>
+  <%= @executable.image_section_headers %>
+</p>
+
+<p>
+  <strong>Import address table:</strong>
+  <%= @executable.import_address_table %>
+</p>
+
+<p>
+  <strong>Image debug directory characteristics:</strong>
+  <%= @executable.image_debug_directory_characteristics %>
+</p>
+
+<p>
+  <strong>Image debug directory time date stamp:</strong>
+  <%= @executable.image_debug_directory_time_date_stamp %>
+</p>
+
+<p>
+  <strong>Image debug directory major version:</strong>
+  <%= @executable.image_debug_directory_major_version %>
+</p>
+
+<p>
+  <strong>Image debug directory minor version:</strong>
+  <%= @executable.image_debug_directory_minor_version %>
+</p>
+
+<p>
+  <strong>Image debug directory type:</strong>
+  <%= @executable.image_debug_directory_type %>
+</p>
+
+<p>
+  <strong>Image debug directory size of data:</strong>
+  <%= @executable.image_debug_directory_size_of_data %>
+</p>
+
+<p>
+  <strong>Image debug directory address of raw data:</strong>
+  <%= @executable.image_debug_directory_address_of_raw_data %>
+</p>
+
+<p>
+  <strong>Image debug directory pointer to raw data:</strong>
+  <%= @executable.image_debug_directory_pointer_to_raw_data %>
+</p>
+
+<p>
+  <strong>Image load config directory size:</strong>
+  <%= @executable.image_load_config_directory_size %>
+</p>
+
+<p>
+  <strong>Image load config directory time date stamp:</strong>
+  <%= @executable.image_load_config_directory_time_date_stamp %>
+</p>
+
+<p>
+  <strong>Image load config directory major version:</strong>
+  <%= @executable.image_load_config_directory_major_version %>
+</p>
+
+<p>
+  <strong>Image load config directory minor version:</strong>
+  <%= @executable.image_load_config_directory_minor_version %>
+</p>
+
+<p>
+  <strong>Image load config directory global flags clear:</strong>
+  <%= @executable.image_load_config_directory_global_flags_clear %>
+</p>
+
+<p>
+  <strong>Image load config directory global flags set:</strong>
+  <%= @executable.image_load_config_directory_global_flags_set %>
+</p>
+
+<p>
+  <strong>Image load config directory critical section default timeout:</strong>
+  <%= @executable.image_load_config_directory_critical_section_default_timeout %>
+</p>
+
+<p>
+  <strong>Image load config directory decommit free block threshold:</strong>
+  <%= @executable.image_load_config_directory_decommit_free_block_threshold %>
+</p>
+
+<p>
+  <strong>Image load config directory decommit total free threshold:</strong>
+  <%= @executable.image_load_config_directory_decommit_total_free_threshold %>
+</p>
+
+<p>
+  <strong>Image load config directory maximum allocation size:</strong>
+  <%= @executable.image_load_config_directory_maximum_allocation_size %>
+</p>
+
+<p>
+  <strong>Image load config directory virtual memory threshold:</strong>
+  <%= @executable.image_load_config_directory_process_heap_flags %>
+</p>
+
+<p>
+  <strong>Image load config directory process affinity mask:</strong>
+  <%= @executable.image_load_config_directory_process_affinity_mask %>
+</p>
+
+<p>
+  <strong>Image load config directory csd version:</strong>
+  <%= @executable.image_load_config_directory_csd_version %>
+</p>
+
+<p>
+  <strong>Image load config directory reserved:</strong>
+  <%= @executable.image_load_config_directory_reserved %>
+</p>
+
+<p>
+  <strong>Image load config directory edit list va:</strong>
+  <%= @executable.image_load_config_directory_edit_list_va %>
+</p>
+
+<p>
+  <strong>Image load config directory security cookie va:</strong>
+  <%= @executable.image_load_config_directory_security_cookie_va %>
+</p>
+
+<p>
+  <strong>Image load config directory se handler table va:</strong>
+  <%= @executable.image_load_config_directory_se_handler_table_va %>
+</p>
+
+<p>
+  <strong>Image load config directory se handler count:</strong>
+  <%= @executable.image_load_config_directory_se_handler_count %>
+</p>
+
+<p>
+  <strong>Image debug type codeview:</strong>
+  <%= @executable.image_debug_type_codeview %>
+</p>
+
+<p>
+  <strong>Import directory table:</strong>
+  <%= @executable.import_directory_table %>
+</p>
+
+<p>
+  <strong>Inport name table:</strong>
+  <%= @executable.inport_name_table %>
+</p>
+
+<p>
+  <strong>Import hints names and dll names:</strong>
+  <%= @executable.import_hints_names_and_dll_names %>
+</p>
+
+<p>
+	<strong>Link to sandbox analysis:</strong>
+	<%= @executable.sandbox_link %>
+</p>
+
+<p>
+	<strong>VT link:</strong>
+	<%= @executable.vt_link %>
+</p>
+
+<p>
+	<strong>Parent packed file:</strong>
+	<%= @executable.parent_packed_file %>
+</p>
+
+<p>
+	<strong>Is file malicious?:</strong>
+	<%= @executable.malicious_file %>
+</p>
+
+<p>
+	<strong>Associated intel/campaign:</strong>
+	<%= @executable.associated_intel %>
+</p>
+<%= link_to 'Edit', edit_executable_path(@executable) %> |
+<%= link_to 'Back', executables_path %>

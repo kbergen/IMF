@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location_options: MyText
+  exploited_application_options: MyText
+  social_engineering_options: MyText
+  user_permissions_options: MyText
+  operating_system_options: MyText
+  incident_cause_options: MyText
+  external_impact: MyText
+  incident_category_options: MyText
+
+two:
+  location_options: MyText
+  exploited_application_options: MyText
+  social_engineering_options: MyText
+  user_permissions_options: MyText
+  operating_system_options: MyText
+  incident_cause_options: MyText
+  external_impact: MyText
+  incident_category_options: MyText

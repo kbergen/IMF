@@ -1,0 +1,41 @@
+<h1>Listing variables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location options</th>
+      <th>Exploited application options</th>
+      <th>Social engineering options</th>
+      <th>User permissions options</th>
+      <th>Operating system options</th>
+      <th>Incident cause options</th>
+      <th>External impact</th>
+      <th>Incident category options</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @variables.each do |variable| %>
+      <tr>
+        <td><%= variable.location_options %></td>
+        <td><%= variable.exploited_application_options %></td>
+        <td><%= variable.social_engineering_options %></td>
+        <td><%= variable.user_permissions_options %></td>
+        <td><%= variable.operating_system_options %></td>
+        <td><%= variable.incident_cause_options %></td>
+        <td><%= variable.external_impact %></td>
+        <td><%= variable.incident_category_options %></td>
+        <td><%= link_to 'Show', variable %></td>
+        <td><%= link_to 'Edit', edit_variable_path(variable) %></td>
+        <td><%= link_to 'Destroy', variable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Variable', new_variable_path %>
